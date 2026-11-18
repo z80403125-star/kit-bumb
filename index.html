@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071426">
+  <meta name="description" content="Интерактивная викторина об общих типах и формах организации производства.">
+  <title>Викторина — организация производства</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">✦</span> Учебная викторина</div>
+    <h1>Проверь свои <span>знания!</span></h1>
+    <p class="subtitle">Общие типы организации производства — 20 вопросов, чтобы проверить и закрепить материал.</p>
+
+    <section class="quiz-card" aria-label="Викторина">
+      <div class="quiz-screen" id="quizScreen">
+        <div class="quiz-topline">
+          <span class="question-count" id="questionCount" aria-live="polite">Вопрос 1 из 20</span>
+          <span class="score-pill" id="scorePill">★ &nbsp;0 баллов</span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-label="Прогресс викторины" aria-valuemin="0" aria-valuemax="20" aria-valuenow="1" id="progressTrack">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <h2 class="question" id="questionText"></h2>
+        <div class="answers" id="answers" role="group" aria-label="Варианты ответа"></div>
+        <div class="feedback" id="feedback" aria-live="polite"></div>
+        <div class="card-footer">
+          <span class="hint" id="hint">Выбери один вариант ответа</span>
+          <button class="primary-button" id="nextButton" type="button" disabled>Следующий вопрос <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+
+      <div class="result-screen" id="resultScreen" aria-live="polite">
+        <div class="result-icon" aria-hidden="true">✦</div>
+        <h2>Викторина завершена!</h2>
+        <h2>жаркын 
+        <p class="result-message">Вот как ты справился с вопросами</p>
+        <p class="result-score" id="resultScore">0 <small>/ 20</small></p>
+        <p class="result-assessment" id="resultAssessment"></p>
+        <button class="secondary-button" id="restartButton" type="button">↻ &nbsp; Пройти заново</button>
+      </div>
+    </section>
+    <p class="footer-note">Отвечай внимательно — после выбора появится объяснение.</p>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
